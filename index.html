@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Cipher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Secret Cipher</h1>
+        <select id="cipherSelect" class="select-box" onchange="updateDescription()">
+            <option value="">Select Cipher</option>
+            <option value="additive">Additive Cipher</option>
+            <option value="multiplicative">Multiplicative Cipher</option>
+            <option value="autokey">Autokey Cipher</option>
+        </select>
+    </header>
+
+    <main class="container">
+
+        <div id="description" class="description">
+            <h2>About Cryptography Algorithms</h2>
+            <p>Cryptography is the practice and study of techniques for secure communication in the presence of third
+                parties. Choose a cipher to learn more!</p>
+        </div>
+
+        <section id="additive" class="cipher-page page">
+            <h2>Additive Cipher</h2>
+            <input type="text" id="additivePlaintext" placeholder="Enter plaintext">
+            <input type="text" id="additiveKey" placeholder="Enter key (integer)">
+            <button onclick="encrypt('additive')">Encrypt</button>
+            <button onclick="decrypt('additive')">Decrypt</button>
+            <textarea id="additiveResult" placeholder="Output" readonly></textarea>
+        </section>
+
+        <section id="multiplicative" class="cipher-page page">
+            <h2>Multiplicative Cipher</h2>
+            <input type="text" id="multiplicativePlaintext" placeholder="Enter plaintext">
+            <input type="text" id="multiplicativeKey" placeholder="Enter key (integer)">
+            <button onclick="encrypt('multiplicative')">Encrypt</button>
+            <button onclick="decrypt('multiplicative')">Decrypt</button>
+            <textarea id="multiplicativeResult" placeholder="Output" readonly></textarea>
+        </section>
+
+        <section id="autokey" class="cipher-page page">
+            <h2>Autokey Cipher</h2>
+            <input type="text" id="autokeyPlaintext" placeholder="Enter plaintext">
+            <input type="text" id="autokeyKey" placeholder="Enter key (alphanumeric)">
+            <button onclick="encrypt('autokey')">Encrypt</button>
+            <button onclick="decrypt('autokey')">Decrypt</button>
+            <textarea id="autokeyResult" placeholder="Output" readonly></textarea>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Secret Cipher Made By Rahul Bhowmik & Md. Abdullah Al Sami</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
